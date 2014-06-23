@@ -1,0 +1,24 @@
+{
+    "name": "exercise/mink-page-object-bundle",
+    "type": "symfony-bundle",
+    "description": "Mink Page Object extention bundle for Symfony2",
+    "keywords": ["web", "test", "browser"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andriy Savchenko",
+            "email": "andriy@healthycode.com"
+        }
+    ],
+
+    "require": {
+        "php":                                      ">=5.3.3",
+        "symfony/framework-bundle":                 "~2.2",
+        "behat/mink-bundle":                        "*",
+        "sensiolabs/behat-page-object-extension":   "*"
+    },
+    "autoload": {
+        "psr-0": { "Savch\\MinkPageObjectBundle": "" }
+    },
+    "target-dir": "Savch/MinkPageObjectBundle"
+}
