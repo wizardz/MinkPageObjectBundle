@@ -1,5 +1,5 @@
 {
-    "name": "exercise/mink-page-object-bundle",
+    "name": "savch/mink-page-object-bundle",
     "type": "symfony-bundle",
     "description": "Mink Page Object extention bundle for Symfony2",
     "keywords": ["web", "test", "browser"],
