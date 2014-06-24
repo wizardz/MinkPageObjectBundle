@@ -11,7 +11,9 @@
         <service id="savch.page_object_extension.page_factory" class="Savch\MinkPageObjectBundle\Factory\PageFactory">
             <argument type="service" id="behat.mink" strict="false" />
             <argument type="service" id="savch.page_object_extension.class_name_resolver" />
-            <argument type="collection" />
+            <argument type="collection">
+                <argument key="base_url">%mink.base_url%</argument>
+            </argument>
         </service>
     </services>
 </container>
