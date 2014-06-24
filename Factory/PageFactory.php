@@ -43,6 +43,6 @@ class PageFactory extends BasePageFactory
      */
     public function createElement($name)
     {
-        return parent::createElement(ltrim($this->classResolver->resolvePage($name), "\\"));
+        return parent::createElement(ltrim($this->classResolver->resolveElement($name), "\\"));
     }
 }
