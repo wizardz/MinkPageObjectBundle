@@ -45,6 +45,26 @@ class CamelCaseClassNameResolver implements ClassNameResolver
     }
 
     /**
+     * @param array $pageNamespaces
+     */
+    public function addPageNamespaces(array $pageNamespaces)
+    {
+        foreach ($pageNamespaces as $namespace) {
+            $this->pageNamespaces[] = $this->normalizeNamespace($namespace);
+        }
+    }
+
+    /**
+     * @param array $elementNamespaces
+     */
+    public function addElementNamespaces(array $elementNamespaces)
+    {
+        foreach ($elementNamespaces as $namespace) {
+            $this->elementNamespaces[] = $this->normalizeNamespace($namespace);
+        }
+    }
+
+    /**
      * @param string $pageObjectName
      * @param array  $namespaces
      * @param string $pageObjectType
@@ -101,26 +121,6 @@ class CamelCaseClassNameResolver implements ClassNameResolver
         }
 
         return null;
-    }
-
-    /**
-     * @param array $pageNamespaces
-     */
-    private function addPageNamespaces(array $pageNamespaces)
-    {
-        foreach ($pageNamespaces as $namespace) {
-            $this->pageNamespaces[] = $this->normalizeNamespace($namespace);
-        }
-    }
-
-    /**
-     * @param array $elementNamespaces
-     */
-    private function addElementNamespaces(array $elementNamespaces)
-    {
-        foreach ($elementNamespaces as $namespace) {
-            $this->elementNamespaces[] = $this->normalizeNamespace($namespace);
-        }
     }
 
     /**
