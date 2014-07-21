@@ -3,8 +3,8 @@
 namespace Savch\MinkPageObjectBundle\Factory;
 
 use Behat\Mink\Mink;
-use Savch\MinkPageObjectBundle\Factory\ClassNameResolver;
-use SensioLabs\Behat\PageObjectExtension\Context\PageFactory as BasePageFactory;
+use SensioLabs\Behat\PageObjectExtension\PageObject\Factory\ClassNameResolver;
+use SensioLabs\Behat\PageObjectExtension\PageObject\Factory\DefaultFactory as BasePageFactory;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Element;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
@@ -22,7 +22,7 @@ class PageFactory extends BasePageFactory
      */
     public function __construct(Mink $mink, ClassNameResolver $classResolver, array $pageParameters)
     {
-        parent::__construct($mink, $pageParameters);
+        parent::__construct($mink, $classResolver, $pageParameters);
         $this->classResolver = $classResolver;
     }
 
@@ -33,7 +33,7 @@ class PageFactory extends BasePageFactory
      */
     public function createPage($name)
     {
-        return parent::createPage(ltrim($this->classResolver->resolvePage($name), "\\"));
+        return parent::createPage($name);
     }
 
     /**
@@ -43,6 +43,6 @@ class PageFactory extends BasePageFactory
      */
     public function createElement($name)
     {
-        return parent::createElement(ltrim($this->classResolver->resolveElement($name), "\\"));
+        return parent::createElement($name);
     }
 }
