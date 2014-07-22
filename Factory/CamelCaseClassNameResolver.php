@@ -2,6 +2,8 @@
 
 namespace Savch\MinkPageObjectBundle\Factory;
 
+use SensioLabs\Behat\PageObjectExtension\PageObject\Factory\ClassNameResolver;
+
 class CamelCaseClassNameResolver implements ClassNameResolver
 {
     /**
