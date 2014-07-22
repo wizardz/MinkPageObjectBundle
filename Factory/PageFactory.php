@@ -5,8 +5,6 @@ namespace Savch\MinkPageObjectBundle\Factory;
 use Behat\Mink\Mink;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Factory\ClassNameResolver;
 use SensioLabs\Behat\PageObjectExtension\PageObject\Factory\DefaultFactory as BasePageFactory;
-use SensioLabs\Behat\PageObjectExtension\PageObject\Element;
-use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
 class PageFactory extends BasePageFactory
 {
