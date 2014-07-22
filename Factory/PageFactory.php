@@ -25,24 +25,4 @@ class PageFactory extends BasePageFactory
         parent::__construct($mink, $classResolver, $pageParameters);
         $this->classResolver = $classResolver;
     }
-
-    /**
-     * @param string $name
-     *
-     * @return Page
-     */
-    public function createPage($name)
-    {
-        return parent::createPage($name);
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return Element
-     */
-    public function createElement($name)
-    {
-        return parent::createElement($name);
-    }
 }
